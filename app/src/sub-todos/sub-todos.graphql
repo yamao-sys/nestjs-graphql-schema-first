@@ -1,0 +1,4 @@
+type SubTodo {
+  title: String
+  content: String
+}

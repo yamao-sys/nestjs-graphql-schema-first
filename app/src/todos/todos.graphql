@@ -1,0 +1,36 @@
+type Todo {
+  title: String!
+  content: String!
+  subTodos: [SubTodo!]!
+}
+
+type BaseTodo {
+  title: String!
+  content: String!
+}
+
+type RemovedResult {
+  result: Boolean
+}
+
+input CreateTodoInput {
+  title: String!
+  content: String!
+}
+
+input UpdateTodoInput {
+  id: Int!
+  title: String!
+  content: String!
+}
+
+type Query {
+  todos: [Todo]!
+  todo(id: Int!): Todo
+}
+
+type Mutation {
+  createTodo(createTodoInput: CreateTodoInput!): BaseTodo!
+  updateTodo(updateTodoInput: UpdateTodoInput!): BaseTodo!
+  removeTodo(id: Int!): RemovedResult!
+}
