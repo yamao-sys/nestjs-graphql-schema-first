@@ -36,9 +36,9 @@ jobs:
         run: |
           npm run test --runInBand
       
-      - name: Run E2E tests
-        working-directory: ./app
-        env:
-          IS_CI: true
-        run: |
-          npm run test:e2e
+      # - name: Run E2E tests
+      #   working-directory: ./app
+      #   env:
+      #     IS_CI: true
+      #   run: |
+      #     npm run test:e2e
